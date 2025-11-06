@@ -8,4 +8,5 @@
     <string name="add_file">Add File</string>
     <string name="cancel"> CANCEL</string>
     <string name="exit">EXIT</string>
+    <string name="app_title">StockPile</string>
 </resources>
