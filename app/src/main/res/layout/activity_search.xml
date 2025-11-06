@@ -9,13 +9,14 @@
 
     <EditText
         android:id="@+id/inputSearch"
+        android:autofillHints="SEARCH"
         android:imeOptions="actionDone"
         android:singleLine="true"
         android:layout_height="50dp"
         android:layout_width="330dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/boarder"
-        android:text="@string/search"
+        android:contentDescription="@string/search_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,5 +32,29 @@
         android:text="result"
         app:layout_constraintTop_toBottomOf="@+id/inputSearch"
         />
+
+    <ImageButton
+        android:id="@+id/addFile"
+        android:layout_width="98dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="252dp"
+        android:contentDescription="@string/add_file"
+        android:src="@drawable/boarder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <ImageButton
+        android:id="@+id/backHome"
+        android:layout_width="79dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="252dp"
+        android:contentDescription="@string/back_to_main_screen"
+        android:src="@drawable/boarder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addFile"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,7 @@
     <string name="search">SEARCH</string>
     <string name="camera">CAMERA</string>
     <string name="files">FILES</string>
+    <string name="back_to_main_screen">back to main screen</string>
+    <string name="search_bar">Search Bar</string>
+    <string name="add_file">add file</string>
 </resources>

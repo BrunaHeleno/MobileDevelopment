@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
             startActivity(intent)
         }
 
+        //#TODO: change activity
         //cameraButton open camera and redirect to SaveFiles
         cameraButton = findViewById(R.id.camera)
         cameraButton.setOnClickListener{
@@ -30,6 +31,7 @@ class MainActivity : ComponentActivity() {
             startActivity(intent)
         }
 
+        //#TODO: change activity
         //filesButton redirects to Files Activity
         filesButton = findViewById(R.id.files)
         filesButton.setOnClickListener{
