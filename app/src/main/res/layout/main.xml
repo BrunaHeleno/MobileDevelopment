@@ -27,7 +27,8 @@
         android:text="@string/search"
         android:background="@drawable/boarder"
         android:layout_margin="15dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/search"/>
 
     <Button
         android:id="@+id/camera"
@@ -36,7 +37,8 @@
         android:text="@string/camera"
         android:background="@drawable/boarder"
         android:layout_margin="15dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/camera"/>
 
     <Button
         android:id="@+id/files"
@@ -45,7 +47,8 @@
         android:text="@string/files"
         android:background="@drawable/boarder"
         android:layout_margin="15dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/files"/>
 
     <Button
         android:id="@+id/exit"
@@ -54,5 +57,8 @@
         android:text="@string/exit"
         android:background="@drawable/boarder"
         android:layout_margin="15dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/exit"/>
 </LinearLayout>
+
+    <!-- Mobile Development Project | Bruna Heleno 3009733 -->
