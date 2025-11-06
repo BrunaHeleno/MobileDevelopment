@@ -28,7 +28,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:background="@drawable/boarder"
-        android:textColor="@color/black"
         android:text="result"
         app:layout_constraintTop_toBottomOf="@+id/inputSearch"
         />
