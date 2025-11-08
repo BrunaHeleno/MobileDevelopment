@@ -9,4 +9,6 @@
     <string name="cancel"> CANCEL</string>
     <string name="exit">EXIT</string>
     <string name="app_title">StockPile</string>
+    <string name="open_camera">OPEN CAMERA</string>
+    <string name="save">SAVE</string>
 </resources>
