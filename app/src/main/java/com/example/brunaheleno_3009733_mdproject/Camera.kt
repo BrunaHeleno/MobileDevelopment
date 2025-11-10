@@ -16,6 +16,7 @@ import androidx.activity.ComponentActivity
 class Camera : ComponentActivity() {
     private lateinit var homeBtn: Button
     private lateinit var searchBtn: Button
+    private lateinit var filesBtn: Button
     private lateinit var closeBtn: Button
     private lateinit var cameraBtn: Button
     private lateinit var cancelBtn: Button
@@ -40,6 +41,12 @@ class Camera : ComponentActivity() {
         searchBtn = findViewById(R.id.searchMenu)
         searchBtn.setOnClickListener {
             val intent = Intent(this, Search::class.java)
+            startActivity(intent)
+        }
+
+        filesBtn = findViewById(R.id. fileMenu)
+        filesBtn.setOnClickListener {
+            val intent = Intent(this, Files::class.java)
             startActivity(intent)
         }
 

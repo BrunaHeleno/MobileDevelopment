@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 class Search : ComponentActivity() {
     private lateinit var homeBtn: Button
     private lateinit var cameraBtn: Button
+    private lateinit var filesBtn: Button
     private lateinit var closeBtn: Button
     private lateinit var searchInputBtn: EditText
     //private lateinit var recycler: RecyclerView
@@ -36,6 +37,12 @@ class Search : ComponentActivity() {
         cameraBtn = findViewById(R.id.cameraMenu)
         cameraBtn.setOnClickListener {
             val intent = Intent(this, Camera::class.java)
+            startActivity(intent)
+        }
+
+        filesBtn = findViewById(R.id.fileMenu)
+        filesBtn.setOnClickListener {
+            val intent = Intent(this, Files::class.java)
             startActivity(intent)
         }
 
