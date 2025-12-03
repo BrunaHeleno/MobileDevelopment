@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">BrunaHeleno_3009733_mdProject</string>
+    <string name="app_name">BrunaHeleno_3009733</string>
     <string name="search">SEARCH</string>
     <string name="camera">CAMERA</string>
     <string name="files">FILES</string>
-    <string name="back_to_main_screen">HOME</string>
-    <string name="search_bar">Search Bar</string>
-    <string name="add_file">Add File</string>
+    <string name="home">HOME</string>
     <string name="cancel"> CANCEL</string>
     <string name="exit">EXIT</string>
     <string name="app_title">StockPile</string>
     <string name="open_camera">OPEN CAMERA</string>
     <string name="save">SAVE</string>
+    <string name="photo">TAKE PHOTO</string>
+    <string name="video">RECORD VIDEO</string>
 </resources>
