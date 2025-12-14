@@ -40,7 +40,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.res.colorResource
 import com.example.brunaheleno_3009733_mdproject.database.CommonFunctions
 import com.example.brunaheleno_3009733_mdproject.ui.ButtonsApp
-import com.example.brunaheleno_3009733_mdproject.ui.ButtonsAppBig
 import com.example.brunaheleno_3009733_mdproject.ui.Menu
 
 //Camera: responsible for open camera: take photo and video, get database input from user and save file
@@ -104,23 +103,25 @@ class Camera : ComponentActivity() {
             //buttons appear just when there's no photo or video
             if(capturedImageUri == null && capturedVideoUri == null){
                 //Button to take photo
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(R.string.take_photo),
                     onClick = {
                         photoUri = createMediaUri("IMG_", ".jpg")
                         takePhotoLauncher.launch(photoUri!!)
                     },
+                    type = "big"
                 )
 
                 Spacer(modifier = Modifier.height(spaceBetween))
 
                 //Button to take video
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(R.string.record_video),
                     onClick = {
                         videoUri = createMediaUri("VID_", ".mp4")
                         recordVideoLauncher.launch(videoUri!!)
                     },
+                    type = "big"
                 )
             }
 

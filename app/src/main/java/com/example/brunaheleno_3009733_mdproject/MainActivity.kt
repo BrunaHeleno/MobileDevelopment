@@ -25,7 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.brunaheleno_3009733_mdproject.R.color
-import com.example.brunaheleno_3009733_mdproject.ui.ButtonsAppBig
+import com.example.brunaheleno_3009733_mdproject.ui.ButtonsApp
 
 //this class represents the home screen and redirects to the other activities
 class MainActivity : ComponentActivity() {
@@ -59,36 +59,40 @@ class MainActivity : ComponentActivity() {
                 Spacer(modifier = Modifier.height(50.dp))
 
                 //button Search redirects to Search screen
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(id = R.string.search),
                     onClick = {
                         startActivity(Intent(this@MainActivity, Search::class.java))
-                    }
+                    },
+                    type = "big"
                 )
                 Spacer(modifier = Modifier.height(spaceBetween))
 
                 //button Camera redirects to Camera screen
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(id = R.string.camera),
                     onClick = {
                         startActivity(Intent(this@MainActivity, Camera::class.java))
-                    }
+                    },
+                    type = "big"
                 )
                 Spacer(modifier = Modifier.height(spaceBetween))
 
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(id = R.string.files),
                     onClick = {
                         startActivity(Intent(this@MainActivity, Files::class.java))
-                    }
+                    },
+                    type = "big"
                 )
                 Spacer(modifier = Modifier.height(spaceBetween))
 
-                ButtonsAppBig(
+                ButtonsApp(
                     text = stringResource(id = R.string.exit),
                     onClick = {
                         finishAffinity()
-                    }
+                    },
+                    type = "big"
                 )
             }
         }

@@ -26,34 +26,6 @@ class FileRepository (context: Context) {
         db.close()
     }
 
-    //search for a file through Title or Category - I'm using filter instead of this function
-    fun search(query: String): List<FileItem>{
-        val db = dbHelper.readableDatabase
-        val list = mutableListOf<FileItem>()
-
-        val cursor = db.rawQuery(
-            "SELECT * FROM ${Database.TABLE_NAME} WHERE ${Database.TITLE} LIKE ? OR ${Database.CATEGORY} LIKE ?",
-            arrayOf("%$query%", "%$query")
-        )
-        if(cursor.moveToFirst()){
-            do{
-                list.add(
-                    FileItem(
-                        id = cursor.getInt(cursor.getColumnIndexOrThrow(Database.ID)),
-                        title = cursor.getString(cursor.getColumnIndexOrThrow(Database.TITLE)),
-                        category = cursor.getString(cursor.getColumnIndexOrThrow(Database.CATEGORY)),
-                        uri = cursor.getString(cursor.getColumnIndexOrThrow(Database.URI)),
-                        timestamp = cursor.getLong(cursor.getColumnIndexOrThrow(Database.TIMESTAMP))
-                    )
-                )
-            }while(cursor.moveToNext())
-        }
-
-        cursor.close()
-        db.close()
-        return list
-    }
-
     //retrieve all files in alphabetical order
     fun getAll(): List<FileItem>{
         val list = mutableListOf<FileItem>()

@@ -17,54 +17,33 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.brunaheleno_3009733_mdproject.R
 
-
-//this method creates a rounded corner button with default values referent Menu on top of the screen
+//this method creates a rounded corner button
 @Composable
-fun ButtonsApp(text: String, onClick:() -> Unit, modifier: Modifier = Modifier, backgroundColor: Color? = null, contentColor: Color? = null, borderColor: Color? = null, corner: Dp = 10.dp, height: Dp = 50.dp, width: Dp = 90.dp, textSize: TextUnit = 15.sp){
+fun ButtonsApp(text: String, onClick:() -> Unit, modifier: Modifier = Modifier, backgroundColor: Color? = null, contentColor: Color? = null, borderColor: Color? = null, type: String? = "small"){
 
     //default colors
     val backC = backgroundColor ?: colorResource(id = R.color.dark_blue)
     val textC = contentColor ?: colorResource(id = R.color.white)
     val borderC = borderColor ?: colorResource(id = R.color.black)
 
-    Button(
-        onClick = onClick,
+    val corner = 10.dp //default corner round
 
-        modifier = modifier
-            .height(height)
-            .width(width)
-            .border(3.dp, borderC, RoundedCornerShape(corner)),
+    //sizes for small button - used on Menu | Cancel/Save
+    var height = 50.dp
+    var width = 90.dp
+    var textSize = 15.sp
 
-        colors = ButtonDefaults.buttonColors(
-            containerColor = backC,
-            contentColor = textC
-        ),
-
-        shape = RoundedCornerShape(corner),
-        contentPadding = PaddingValues(10.dp) //inside
-    ) {
-        Text(
-            text = text.uppercase(),
-            fontSize = textSize,
-            fontWeight = FontWeight.Bold
-        )
+    //size for big buttons - Home and Camera Screen
+    if(type == "big"){
+        height = 70.dp
+        width = 300.dp
+        textSize = 30.sp
     }
-}
 
-//this method creates a rounded corner button with default values for Big Buttons - used in MainActivity and Camera Screen
-@Composable
-fun ButtonsAppBig(text: String, onClick:() -> Unit, modifier: Modifier = Modifier, backgroundColor: Color? = null, contentColor: Color? = null, borderColor: Color? = null, corner: Dp = 10.dp, height: Dp = 70.dp, width: Dp = 300.dp, textSize: TextUnit = 30.sp){
-
-    //default colors
-    val backC = backgroundColor ?: colorResource(id = R.color.dark_blue)
-    val textC = contentColor ?: colorResource(id = R.color.white)
-    val borderC = borderColor ?: colorResource(id = R.color.black)
 
     Button(
         onClick = onClick,
