@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BrunaHeleno_3009733</string>
+    <string name="search">SEARCH</string>
+    <string name="camera">CAMERA</string>
+    <string name="files">FILES</string>
+    <string name="home">HOME</string>
+    <string name="cancel"> CANCEL</string>
+    <string name="exit">EXIT</string>
+    <string name="app_title">StockPile</string>
+    <string name="save">SAVE</string>
+    <string name="photo">TAKE PHOTO</string>
+    <string name="video">RECORD VIDEO</string>
+    <string name="delete"> DELETE </string>
+    <string name="confirm"> CONFIRM </string>
+    <string name="take_photo"> TAKE PHOTO </string>
+    <string name="record_video"> RECORD VIDEO</string>
+    <string name="title_field"> TITLE </string>
+    <string name="category"> CATEGORY </string>
+</resources>
